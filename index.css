@@ -1,0 +1,855 @@
+body {
+    color: #FF3C8E;
+    background-color: #E9FFC6;
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.greeting {
+    position: fixed;
+    top: 70px;
+    left:20px;
+    z-index: 2;
+}
+.welc {
+    font-family: 'Inter', sans-serif;
+    font-size: 6rem;
+    margin: 0;
+    width: 1200px;
+}
+.ask {
+    margin: 0;
+    font-family: 'Just Me Again Down Here', cursive;
+    font-size: 3rem;
+}
+#Leaf {
+    position: fixed;
+    left:-300px;
+    top: 190px;
+    scale: 1.3;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(10px);}
+}
+#top-right-leaf {
+    scale:1.4;
+    position: fixed;
+    top: -200px;
+    right: -200px;
+    z-index: -1;
+    animation: fanning 3s ease-in-out infinite;
+    transition:1s;
+}
+@keyframes fanning {
+    0% {rotate: 3deg;}
+    50% {rotate: 0deg;}
+    100%{rotate: 3deg;}
+}
+#bottom-right-leaf {
+    scale: 1.6;
+    position: fixed;
+    right: -100px;
+    bottom: -400px;
+    animation: fan 3s ease-in-out infinite;
+    transition:1s;
+}
+@keyframes fan {
+    0% {rotate: 0deg;}
+    50% {rotate: 3deg;}
+}
+#flower {
+    scale:0.4;
+    position: fixed;
+    animation: rot 50s linear infinite;
+    transition:1s;
+}
+@keyframes rot {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
+}
+.flower1 {
+    right: 0;
+    top:0px;
+}
+.flower2 {
+    right:200px;
+    top:-200px;
+}
+.flower3 {
+    scale: 0.6;
+    position: fixed;
+    right: 400px;
+    top:400px;
+    transition:1s;
+    
+}
+.flower4{
+    scale: 0.6;
+    position: fixed;
+    right: 700px;
+    top:200px;
+    transition:1s;
+    
+}
+.nail-img { transition:1s}
+.nav {
+    font-family: 'Josefin Slab', serif;
+    font-size:3rem;
+    display: grid;
+    grid-template-columns:280px;
+    position: fixed;
+    top: 350px;
+    left: 200px;
+    z-index: 4;
+    background-color: antiquewhite;
+    align-items: center;
+    border-radius: 15px;
+    transition: 1s;
+}
+.nav a {
+    z-index: 3;
+}
+#arrow1,#arrow2,#arrow3,#arrow4 {
+    visibility: hidden;
+    position: absolute;
+    left:-90px
+}
+#arrow1 {
+    top:-20px;
+}
+#arrow2 {
+    top:70px;
+}
+#arrow3 {
+    top:155px;
+}
+#arrow4 {
+    top:245px;
+}
+
+.nav a {
+    margin: 20px;
+    color: #FF3C8E;
+    text-decoration: none;
+}
+.nav a:focus {
+    font-weight: bolder;
+}
+#contact:focus + svg {
+    visibility: visible;
+}
+#about:focus + svg {
+    visibility: visible;
+}
+#serv:focus + svg {
+    visibility: visible;
+}
+#gallery:focus + svg {
+    visibility: visible;
+}
+.logo-name {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 20px;
+}
+.logo-name h1{
+    margin-left: 30px;
+    font-family: 'Jacques Francois', serif;
+}
+.logo-name strong {
+    font-family: 'Inter', sans-serif;
+}
+
+/* contact section*/
+.contact-content {
+    display: grid;
+    position: fixed;
+    grid-template-columns: 800px;
+    font-family: 'Akshar', sans-serif;
+    font-size: 2rem;
+    color: black;
+    right: -900px;
+    top:210px;
+    z-index: 3;
+    transition: 1s;
+}
+#logos {
+    justify-content: center;
+}
+.hours {
+    display: grid;
+    grid-template-columns: 100px 700px;
+}
+.hours-logo {
+    height: 210px;
+    display: grid;
+    align-items: center;
+}
+.hours-spec {
+    display: grid;
+    grid-template-rows: 70px 70px 70px;
+    align-items: center;
+}
+
+.tele {
+    display: grid;
+    grid-template-columns: 100px 700px;
+}
+.tele-logo {
+    height: 120px;
+    display: grid;
+    align-items: center;
+}
+.tele-spec {
+    display: grid;
+    align-items: center;
+}
+
+.location {
+    display: grid;
+    grid-template-columns: 100px 700px;
+}
+.loc-logo {
+    height: 110px;
+    display: grid;
+    align-items: center;
+}
+.loc-spec {
+    display: grid;
+    align-items: center;
+}
+
+.payments {
+    display: grid;
+    grid-template-columns: 100px 700px;
+}
+.pay-logo {
+    height: 210px;
+    display: grid;
+    align-items: center;
+}
+.pay-spec {
+    display: grid;
+    grid-template-rows: 70px 70px 70px;
+    grid-template-columns: 590px 10px;
+    align-items: center;
+}
+
+/*about section */
+.about-content {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1200px;
+    right: 10px;
+    top:170px;
+    z-index: 3;
+    opacity: 0;
+    color: black;
+    transition: 1s;
+}
+.content {
+    font-family: 'Just Me Again Down Here', cursive;
+    font-size: 40px;
+    margin: 0;
+}
+#content-sect {
+    display: grid;
+    grid-template-rows: 60px;
+}
+.titles {
+    font-family: 'Inter', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+/* service content */
+.service-content {
+    font-family: 'Inter', sans-serif;
+    font-size:3rem;
+    letter-spacing: 2px;
+    width:1000px;
+    height: 700px;
+    overflow: scroll;
+    background: rgba(255, 197, 221, 0.6);
+    color:black; 
+}
+.serv-hide-scroll{
+    position: fixed;
+    top:-900px;/*og 200*/
+    right:200px;
+    z-index: 4;  
+    height: 680px;
+    width: 980px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 1s;
+}
+.service-container {
+    display: grid;
+    grid-template-rows: 100px 250px;
+}
+.service-desc {
+    width: 1000px;
+    height: 250px;
+    overflow: scroll;
+    font-family: 'Just Me Again Down Here', cursive;
+}
+.service {
+    display: grid;
+    grid-template-columns: 100px 900px;
+    align-items: center;
+}
+.services {
+    margin:20px 0px;
+    font-weight: bold;
+    border-bottom: solid;
+}
+.serv-scroll {
+    height: 230px;
+    width: 980px;
+    overflow: hidden;
+    transition: 0.6s;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* gallery content */
+.gallery-content {
+    position: fixed;
+    display: grid;
+    height: 840px;
+    grid-template-columns: 280px 280px 280px;
+    top:50px;
+    right: -900px;/*og 250*/
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+
+}
+.gallery-content img:hover {
+    scale:1.9;
+    transition: 0.3s;
+}
+.gallery-content video:hover {
+    scale:1.9;
+    transition: 0.3s;
+}
+.gallery-content img, .gallery-content video {
+    border-radius: 7px;
+}
+.home-imgs {
+    position: fixed;
+}
+@media screen and (min-width:1340px) and (max-width:1700px) {
+    .nav {
+        left:50px;
+        grid-template-columns: 185px;
+    }
+    .welc, .ask{
+        display: none;
+    }
+    .service {
+        font-size:80%;
+    }
+    .serv-hide-scroll {
+        right: 50px;
+    }
+    .contact-content {
+        top: 100px;
+    }
+      
+    .about-content {
+        grid-template-columns: 1050px;
+        top: 100px;
+    }
+}
+
+
+@media screen and (max-width:1339px) {
+    .nav {
+        left:50px;
+        grid-template-columns: 185px;
+    }
+    .welc, .ask{
+        display: none;
+    }
+    .service {
+        font-size:80%;
+    }
+    .serv-hide-scroll {
+        right: 50px;
+    }
+    .contact-content {
+        top: 100px;
+    }
+      
+    .about-content {
+        grid-template-columns: 1050px;
+        top: 100px;
+    }
+}
+
+@media screen and (min-width:970px) and (max-width:1339px) {
+    .welc, .ask{
+        display: none;
+    }
+    .nav {
+        top:20px;
+        left: 450px;
+        font-size: 2rem;
+        grid-template-columns: 130px 130px 130px 130px;
+    }
+    #arrow1,#arrow2,#arrow3,#arrow4 {
+        display: none;
+    }
+    .gallery-content img {
+       scale:0.6;
+    }
+    .gallery-content img:hover, .gallery-content video:hover {
+        scale:1.4;
+     }
+    .gallery-content {
+        grid-template-columns: 180px 180px 180px;
+        height: 450px;
+    }
+    .contact-content {
+        font-size: 1.3rem;
+        top:100px;
+    }
+    .about-content {
+        grid-template-columns: 950px;
+        top: 100px;
+
+    }
+    .content {
+        font-size: 30px;
+    }
+    /* contact stuff */
+    .contact-content {
+        grid-template-columns: 310px 300px;
+        font-size: 1.3rem;
+        top:210px;
+    }
+
+    .hours {
+        grid-template-columns: 100px 260px;
+    }
+    .hours-logo {
+        height: 150px;
+
+    }
+    .hours-spec {
+        grid-template-rows: 50px 50px 50px;
+    }
+    
+    .tele {
+        display: grid;
+        grid-template-columns: 100px 260px;
+    }
+    .tele-logo {
+        height: 150px;
+    }
+
+    .location {
+        display: grid;
+        grid-template-columns: 100px 240px;
+    }
+    .loc-logo {
+        height: 190px;
+    }
+    .payments {
+        display: grid;
+        grid-template-columns: 100px 260px;
+    }
+    .pay-logo {
+        height: 210px;
+        display: grid;
+        align-items: center;
+    }
+    .pay-spec {
+        display: grid;
+        grid-template-rows: 50px 50px 50px;
+    }
+    /*services */
+    /* service content */
+.service-content {
+    font-size:2rem;
+    width:700px;
+    height: 630px;
+
+}
+.serv-hide-scroll{ 
+    height: 610px;
+    width: 680px;
+}
+.service-desc p {
+    width: 620px;
+}
+.service-container {
+    display: grid;
+    grid-template-rows: 100px 200px;
+}
+}
+
+
+@media screen and (max-width:529px) {
+    .welc, .ask{
+        display: none;
+    }
+    .flower3 {
+        display: none;
+    }
+    .nav {
+        top:60px;
+        left: 10px;
+        font-size: 1.7rem;
+        grid-template-columns: 115px 115px 115px 115px;
+    }
+    #arrow1,#arrow2,#arrow3,#arrow4 {
+        display: none;
+    }
+    .gallery-content img {
+       scale:0.6;
+    }
+    .gallery-content img:hover, .gallery-content video:hover {
+        scale:1.2;
+     }
+    .gallery-content {
+        grid-template-columns: 120px 120px;
+    }
+    .about-content {
+        grid-template-columns: 950px;
+        top: 100px;
+
+    }
+    .content {
+        font-size: 30px;
+    }
+    /* contact stuff */
+    .contact-content {
+        grid-template-columns: 200px;
+        font-size: 1.3rem;
+        top:210px;
+    }
+
+    .hours {
+        grid-template-columns: 100px 260px;
+    }
+    .hours-logo {
+        height: 150px;
+
+    }
+    .hours-spec {
+        grid-template-rows: 50px 50px 50px;
+    }
+    
+    .tele {
+        display: grid;
+        grid-template-columns: 100px 260px;
+    }
+    .tele-logo {
+        height: 150px;
+    }
+
+    .location {
+        display: grid;
+        grid-template-columns: 100px 240px;
+    }
+    .loc-logo {
+        height: 190px;
+    }
+    .payments {
+        display: grid;
+        grid-template-columns: 100px 260px;
+    }
+    .pay-logo {
+        height: 210px;
+        display: grid;
+        align-items: center;
+    }
+    .pay-spec {
+        display: grid;
+        grid-template-rows: 50px 50px 50px;
+    }
+    /*services */
+    /* service content */
+.service-content {
+    font-size:1.7rem;
+    width:420px;
+    height: 630px;
+
+}
+.serv-hide-scroll{ 
+    height: 610px;
+    width: 400px;
+}
+.service-desc p {
+    width: 400px;
+}
+.service-container {
+    display: grid;
+    grid-template-rows: 100px 200px;
+}
+.service {
+    display: grid;
+    grid-template-columns: 50px 300px;
+    align-items: center;
+}
+/*about section */
+.about-content {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 500px;
+    right: -10px;
+    top:135px;
+}
+.content {
+    font-size: 30px;
+}
+.titles {
+    font-size: 1.7rem;
+    margin-top:10px;
+}
+#Leaf {
+    position: fixed;
+    left:-300px;
+    top: 190px;
+    scale: 1.3;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(10px);}
+}
+#top-right-leaf {
+    scale:1.4;
+    position: fixed;
+    top: -200px;
+    right: -200px;
+    z-index: -1;
+    animation: fanning 3s ease-in-out infinite;
+    transition:1s;
+}
+@keyframes fanning {
+    0% {rotate: 3deg;}
+    50% {rotate: 0deg;}
+    100%{rotate: 3deg;}
+}
+#bottom-right-leaf {
+    scale: 1.6;
+    position: fixed;
+    right: -100px;
+    bottom: -400px;
+    animation: fan 3s ease-in-out infinite;
+    transition:1s;
+}
+@keyframes fan {
+    0% {rotate: 0deg;}
+    50% {rotate: 3deg;}
+}
+#flower {
+    scale:0.4;
+    position: fixed;
+    animation: rot 50s linear infinite;
+    transition:1s;
+}
+@keyframes rot {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
+}
+
+.flower2 {
+    right:-200px;
+    top:500px;
+}
+
+.flower1 {
+    display: none;
+}
+.nail-img {
+    left: -180px;
+}
+}
+
+@media screen and (min-width:530px) and (max-width:969px) {
+    .welc, .ask{
+        display: none;
+    }
+    .flower3 {
+        display: none;
+    }
+    .nav {
+        top:60px;
+        left: 10px;
+        font-size: 1.7rem;
+        grid-template-columns: 115px 115px 115px 115px;
+    }
+    #arrow1,#arrow2,#arrow3,#arrow4 {
+        display: none;
+    }
+    .gallery-content img {
+       scale:0.6;
+    }
+    .gallery-content img:hover, .gallery-content video:hover {
+        scale:1.2;
+     }
+    .gallery-content {
+        grid-template-columns: 120px 120px;
+    }
+    .about-content {
+        grid-template-columns: 950px;
+        top: 100px;
+
+    }
+    .content {
+        font-size: 30px;
+    }
+    /* contact stuff */
+    .contact-content {
+        grid-template-columns: 200px;
+        font-size: 1.3rem;
+        top:210px;
+    }
+
+    .hours {
+        grid-template-columns: 100px 260px;
+    }
+    .hours-logo {
+        height: 150px;
+
+    }
+    .hours-spec {
+        grid-template-rows: 50px 50px 50px;
+    }
+    
+    .tele {
+        display: grid;
+        grid-template-columns: 100px 260px;
+    }
+    .tele-logo {
+        height: 150px;
+    }
+
+    .location {
+        display: grid;
+        grid-template-columns: 100px 240px;
+    }
+    .loc-logo {
+        height: 190px;
+    }
+    .payments {
+        display: grid;
+        grid-template-columns: 100px 260px;
+    }
+    .pay-logo {
+        height: 210px;
+        display: grid;
+        align-items: center;
+    }
+    .pay-spec {
+        display: grid;
+        grid-template-rows: 50px 50px 50px;
+    }
+    /*services */
+    /* service content */
+.service-content {
+    font-size:1.7rem;
+    width:540px;
+    height: 630px;
+
+}
+.serv-hide-scroll{ 
+    height: 610px;
+    width: 520px;
+}
+.service-desc p {
+    width: 520px;
+}
+.service-container {
+    grid-template-rows: 100px 200px;
+}
+.service {
+    grid-template-columns: 50px 400px;
+}
+/*about section */
+.about-content {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 500px;
+    right: -10px;
+    top:135px;
+}
+.content {
+    font-size: 30px;
+}
+.titles {
+    font-size: 1.7rem;
+    margin-top:10px;
+}
+#Leaf {
+    position: fixed;
+    left:-300px;
+    top: 190px;
+    scale: 1.3;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(10px);}
+}
+#top-right-leaf {
+    scale:1.4;
+    position: fixed;
+    top: -200px;
+    right: -200px;
+    z-index: -1;
+    animation: fanning 3s ease-in-out infinite;
+    transition:1s;
+}
+@keyframes fanning {
+    0% {rotate: 3deg;}
+    50% {rotate: 0deg;}
+    100%{rotate: 3deg;}
+}
+#bottom-right-leaf {
+    scale: 1.6;
+    position: fixed;
+    right: -100px;
+    bottom: -400px;
+    animation: fan 3s ease-in-out infinite;
+    transition:1s;
+}
+@keyframes fan {
+    0% {rotate: 0deg;}
+    50% {rotate: 3deg;}
+}
+#flower {
+    scale:0.4;
+    position: fixed;
+    animation: rot 50s linear infinite;
+    transition:1s;
+}
+@keyframes rot {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
+}
+
+.flower2 {
+    right:-200px;
+    top:500px;
+}
+
+.flower1 {
+    display: none;
+}
+.nail-img {
+    left: -180px;
+}
+}
